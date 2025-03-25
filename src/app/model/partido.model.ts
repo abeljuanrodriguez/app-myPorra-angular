@@ -12,7 +12,8 @@ export class Partido {
     public isJugado: boolean,
     public flagEquipo1: string,
     public flagEquipo2: string,
-    public ganador: EnumGanador
+    public ganador: EnumGanador,
+    public resultado: EnumResultado
   ) {}
 }
 
@@ -21,4 +22,11 @@ export enum EnumGanador {
   LOCAL = 'Local',
   VISITANTE = 'Visitante',
   EMPATE = 'Empate',
+}
+
+// Define el enum (debe coincidir con el backend)
+export enum EnumResultado {
+  ACIERTO_TOTAL = 'ACIERTO_TOTAL',
+  ACIERTO_PARCIAL = 'ACIERTO_PARCIAL',
+  FALLO = 'FALLO',
 }

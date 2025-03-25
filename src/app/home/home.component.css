@@ -115,7 +115,7 @@ body {
 
 .step-number {
   background-color: var(--color-accent);
-  color: white;
+  color: #e67e22;
   width: 40px;
   height: 40px;
   border-radius: 50%;

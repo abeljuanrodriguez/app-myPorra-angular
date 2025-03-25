@@ -65,3 +65,26 @@
   text-overflow: ellipsis;
   font-size: clamp(0.75rem, 2.5vw, 1rem); /* Tamaño responsive */
 }
+
+.score-input-acierto-total {
+  background-color: #b2e1b4; /* Verde para acierto total */
+  color: white;
+  border-color: #388E3C;
+}
+
+.score-input-acierto-parcial {
+  background-color: #fff0c1; /* Amarillo para acierto parcial */
+  color: black;
+  border-color: #FFA000;
+}
+
+.score-input-fallo {
+  background-color: #ff9c95; /* Rojo para fallo */
+  color: white;
+  border-color: #D32F2F;
+}
+
+.score-input-default {
+  background-color: #FFFFFF; /* Blanco por defecto */
+  color: black;
+}
