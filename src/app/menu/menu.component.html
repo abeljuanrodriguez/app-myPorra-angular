@@ -1,0 +1,42 @@
+<nav class="container-fluid p-0 m-0">
+  <div
+    class="row d-flex justify-content-center align-items-center text-center g-4"
+  >
+    <a
+      class="col-3 col-sm-2"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img class="icono" src="/assets/images/home.svg" alt="Inicio" />
+    </a>
+    <a
+      class="col-3 col-sm-2"
+      routerLink="/resultados"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img class="icono" src="assets/images/resultados.svg" alt="Resultados" />
+    </a>
+    <a
+      class="col-3 col-sm-2"
+      routerLink="/clasificacion"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img
+        class="icono"
+        src="assets/images/clasificacion.svg"
+        alt="Clasificación"
+      />
+    </a>
+    <a
+      class="col-3 col-sm-2"
+      routerLink="/perfil"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img class="icono" src="assets/images/perfil.svg" alt="Perfil" />
+    </a>
+  </div>
+</nav>

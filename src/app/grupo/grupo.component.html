@@ -1,0 +1,5 @@
+@for (item of products; track item.id) {
+<app-grupo-partidos [grupo]="item" />
+} @empty {
+<li>There are no items.</li>
+}

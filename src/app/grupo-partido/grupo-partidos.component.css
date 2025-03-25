@@ -1,0 +1,39 @@
+/* Estilo del texto con la línea */
+.group-name {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 10px;
+  background-color: white;  /* Fondo blanco para que el texto quede encima de la línea */
+}
+
+/* Línea horizontal */
+.group-name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #FF6600;  /* Color de la línea */
+  width: 100%;
+}
+
+.group-container {
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el efecto de elevación */
+  margin-bottom: 20px; /* Espacio debajo */
+}
+
+.group-name {
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #333; /* Color de texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin-bottom: 15px; /* Espacio debajo del texto */
+  position: relative; /* Asegura que la sombra no afecte el texto */
+  z-index: 1; /* Para asegurarse de que el texto quede por encima de la sombra */
+}

@@ -1,0 +1,38 @@
+<div class="container py-1">
+  <div class="row align-items-center text-center">
+    <div class="col-1 d-flex justify-content-center px-0">
+      <img [src]="partido?.flagEquipo1" alt="Logo" class="team-logo" />
+    </div>
+    <div class="col-3 px-0">
+      <p [id]="partido?.idEquipo1" class="team-name m-0">
+        {{ partido?.nombreEquipo1 }}
+      </p>
+    </div>
+    <div class="col-2 px-1">
+      <input
+        value="{{ partido?.gfEquipo1 }}"
+        disabled="{{ partido?.isJugado }}"
+        type="number"
+        class="score-input w-100 m-0 text-center"
+        placeholder="0"
+        min="0"
+      />
+    </div>
+    <div class="col-2 px-1">
+      <input
+        value="{{ partido?.gfEquipo2 }}"
+        disabled="{{ partido?.isJugado }}"
+        type="number"
+        class="score-input w-100 m-0 text-center"
+        placeholder="0"
+        min="0"
+      />
+    </div>
+    <div class="col-3 px-0">
+      <p class="team-name m-0">{{ partido?.nombreEquipo2 }}</p>
+    </div>
+    <div class="col-1 d-flex justify-content-center px-0">
+      <img [src]="partido?.flagEquipo2" alt="Logo" class="team-logo" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+.container{
+  margin-top: 10px;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.score {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FF6600;
+  margin-left: 20px;
+}
+
+/* ---- Inputs de Marcador (Fondo #f9e8d2) ---- */
+.score-input {
+  border: 2px solid #d4b483; /* Borde marrón claro que contrasta con el fondo */
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: white;
+  color: #5a4a3a; /* Texto marrón oscuro */
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Input habilitado (editable) */
+.score-input:not(:disabled) {
+  border-color: #e67e22; /* Borde naranja como el indicador activo */
+  background-color: #fff9f0; /* Fondo blanco cálido */
+}
+
+/* Input deshabilitado */
+.score-input:disabled {
+  background-color: #f0e0c8; /* Fondo más oscuro que el contenedor pero armónico */
+  border-color: #c4a97a; /* Borde marrón suave */
+  color: #7d6d5a; /* Texto atenuado */
+  cursor: not-allowed;
+  box-shadow: none; /* Elimina sombra interior */
+}
+
+/* Placeholder deshabilitado */
+.score-input:disabled::placeholder {
+  color: #b8a99a;
+}
+
+/* Efecto al enfocar (solo en habilitados) */
+.score-input:not(:disabled):focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+.team-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  text-overflow: ellipsis;
+  font-size: clamp(0.75rem, 2.5vw, 1rem); /* Tamaño responsive */
+}

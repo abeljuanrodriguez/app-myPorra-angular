@@ -1,0 +1,83 @@
+nav {
+  display: flex;
+  gap: 1rem;
+  background: #333;
+  padding: 1rem;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ---- Estilo para tu Navbar Superior ---- */
+.container-fluid {
+  background-color: #f9e8d2; /* Color de fondo solicitado */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 12px 0 !important; /* Espaciado vertical */
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Iconos */
+.icono {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Enlaces */
+.col-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* Efecto hover (para dispositivos con cursor) */
+@media (hover: hover) {
+  .icono:hover {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+/* Estado activo */
+.active {
+  position: relative;
+}
+
+/* Icono activo (mismo color que el indicador) */
+.active .icono {
+  transform: scale(1.1);
+  filter:
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15))
+    brightness(0) saturate(100%) invert(58%) sepia(90%) saturate(344%) hue-rotate(349deg) brightness(92%) contrast(87%);
+  /* Filtro SVG para convertir el icono a #e67e22 */
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: #e67e22; /* Color naranja para el indicador */
+  border-radius: 3px;
+}

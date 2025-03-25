@@ -1,0 +1,266 @@
+/* Variables de color */
+:root {
+  --color-base: #f9e8d2;       /* Fondo principal */
+  --color-accent: #e67e22;     /* Naranja principal */
+  --color-dark: #5a4a3a;       /* Texto oscuro */
+  --color-light: #ffffff;       /* Fondo claro */
+  --color-success: #4caf50;     /* Verde para aciertos */
+  --color-warning: #ffc107;     /* Amarillo para advertencias */
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, var(--color-accent), #d35400);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo span {
+  font-weight: normal;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 2rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--color-accent);
+  font-size: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-accent);
+  margin: 0.5rem auto 0;
+}
+
+/* Pasos para jugar */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+}
+
+.step-number {
+  background-color: var(--color-accent);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.step-visual {
+  margin-top: 1rem;
+  background-color: var(--color-base);
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Elementos de preview */
+.match-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team img {
+  width: 40px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vs {
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+.score-input-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview-input {
+  width: 50px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid #d4b483;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: var(--color-light);
+}
+
+.preview-button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-button:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+}
+
+.result-preview {
+  background-color: color-mix(in srgb, var(--color-success) 20%, transparent);
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.result-success {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Reglas y puntuación */
+.rules-section {
+  background-color: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.rules-title {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.rules-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.rules-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rules-list i {
+  color: var(--color-accent);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}

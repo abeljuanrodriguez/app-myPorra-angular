@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-2 group-container">
+      <p [id]="grupo?.id" class="group-name">{{ grupo?.nombre }}</p>
+      @for (partido of partidos; track partido.id) {
+      <app-resultado-partido [partido]="partido" />
+      } @empty {
+      <li>There are no items.</li>
+      }
+    </div>
+  </div>
+</div>
