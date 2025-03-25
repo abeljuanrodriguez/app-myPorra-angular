@@ -12,7 +12,9 @@ export class PartidoService {
 
   getPartidosByIdGrupo(id: number): Observable<Partido[]> {
     return this._http.get<Partido[]>(
-      'http://localhost:8080/api/partido/findByIdGrupo/' + id + '/26'
+      'https://aplicacionporra-production.up.railway.app/api/partido/findByIdGrupo/' +
+        id +
+        '/26'
     );
   }
 
