@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { GrupoModelo } from '../model/grupo.model';
 import { Partido } from '../model/partido.model';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root',
@@ -12,9 +13,7 @@ export class PartidoService {
 
   getPartidosByIdGrupo(id: number): Observable<Partido[]> {
     return this._http.get<Partido[]>(
-      'https://aplicacionporra-production.up.railway.app/api/partido/findByIdGrupo/' +
-        id +
-        '/26'
+      environment.apiUrl + 'partido/findByIdGrupo/' + id + '/26'
     );
   }
 
